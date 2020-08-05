@@ -1,11 +1,15 @@
 import React from 'react'
 
 import PageHeader from '../../components/PageHeader'
+import TextArea from '../../components/TextArea'
 import Input from '../../components/Input'
+import Select from '../../components/Select'
 
 import warningIcon from '../../assets/images/icons/warning.svg'
 
 import './styles.css'
+
+
 
 const TeacherForm: React.FC = () => {
     return (
@@ -21,15 +25,29 @@ const TeacherForm: React.FC = () => {
                     <Input name="name" label="Nome completo"/>
                     <Input name="avatar" label="Avatar"/>
                     <Input name="whatsapp" label="Whatsapp"/>
+                    <TextArea name="bio" label="Biografia"/>
 
                 </fieldset>
 
                 <fieldset>
                     <legend>Sobre a aula</legend>
 
-                    <Input name="subject" label="Matéria"/>
+                    <Select
+                        name="subject"
+                        label="Matéria"
+                        options={[
+                            {value: 'Artes', label: 'Artes'},
+                            {value: 'Biologia', label: 'Biologia'},
+                            {value: 'Ciências', label: 'Ciências'},
+                            {value: 'Física', label: 'Física'},
+                            {value: 'Química', label: 'Química'},
+                            {value: 'Matemática', label: 'Matemática'},
+                            {value: 'História', label: 'História'},
+                            {value: 'Português', label: 'Português'},
+                            {value: 'Literatura', label: 'Literatura'},
+                        ]}
+                    />
                     <Input name="cost" label="Custo da sua hora por aula"/>
-                    <Input name="whatsapp" label="Whatsapp"/>
 
                 </fieldset>
 
