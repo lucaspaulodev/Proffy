@@ -76,6 +76,10 @@
     background: var(--color-secundary-dark);
 }
 
+.teacher-item footer img {
+    margin-right: 0.8rem;
+} 
+
 @media (min-width: 700px) {
     .teacher-item header, .teacher-item footer {
         padding: 3.2rem;
